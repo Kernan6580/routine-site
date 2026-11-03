@@ -78,6 +78,18 @@ a{color:var(--accent-ink)}
 <h3>Nothing fired when I left home or reached the store</h3>
 <p>Location reminders need "Always" location permission (Settings › Routine › Location › Always), and the app must not be force-quit. iOS stops waking apps that have been swiped closed from the app switcher; just open Routine again and it picks back up. Arrivals can take a minute or two to register, which is normal for iPhone geofencing.</p>
 
+<h3>The wake-up alarm didn't ring, or "Start my day" didn't open the brief</h3>
+<p>The wake-up needs the Alarms permission (Settings › Routine › Alarms) and the phone's alarm volume up; it rings through Silent and Focus by design. Only the days you picked are on. If <i>Start my day</i> doesn't open the brief from the Lock Screen, unlock the phone and open Routine; the brief is waiting on the Today screen for the next few hours.</p>
+
+<h3>"I'm here" saved the wrong spot, or won't save</h3>
+<p>It uses your precise location, so give Precise Location when iPhone asks. If you're already somewhere saved as a different kind of place, it tells you instead of moving the old one; use Control › Places to delete or re-save. Indoors in a large building, step toward a window or doorway and try again.</p>
+
+<h3>It saved my words but didn't set a time</h3>
+<p>Understanding a sentence needs Apple Intelligence, which must be on and finished downloading (Settings › Apple Intelligence &amp; Siri). Until then Routine keeps what you typed as a plain reminder for tomorrow; tap it in Memory to set the time yourself.</p>
+
+<h3>How do I change a reminder?</h3>
+<p>Tap it on the Memory or Plan screen. You can change the words, when it fires, the days it repeats and the place, or delete it. Touch and hold for Later today, Tomorrow and Skip.</p>
+
 <h3>I'm getting too many, or too few, reminders</h3>
 <p>Use the actions on each notification. Done and Not useful teach Routine which kinds of nudges you want. The daily cap and quiet hours are on the Control screen. Important items (a leave-by for a real appointment) are allowed through even when the cap is reached.</p>
 
@@ -87,6 +99,12 @@ a{color:var(--accent-ink)}
 <h3>The mic didn't catch what I said</h3>
 <p>Hold the mic button for the whole sentence and release when you're done. The first press asks for microphone and speech permission. Speech is transcribed on the iPhone, so it works without a connection but needs the on-device language model for your language to be downloaded (Settings › General › Keyboard › Dictation).</p>
 
+<h3>I paid for Plus but it says I don't have it</h3>
+<p>Open Control › Routine Plus and tap Unlock Plus, then <b>Restore purchases</b> at the bottom. Plus is tied to your Apple Account, so make sure the iPhone is signed in to the same one you bought it with. If it still doesn't show, restart the iPhone; that clears a known App Store glitch.</p>
+
+<h3>How do I cancel Plus?</h3>
+<p>Settings › your name › Subscriptions › Routine Plus › Cancel. You keep Plus until the end of the period you paid for. The lifetime plan has nothing to cancel.</p>
+
 <h3>How do I get my data out, or delete it?</h3>
 <p>Control screen › Export everything gives you a file with all your reminders and history. Delete everything wipes it. Deleting the app also removes all data.</p>
 
@@ -94,12 +112,13 @@ a{color:var(--accent-ink)}
 <p>Include your iPhone model, iOS version, and what you expected to happen. If it's about a reminder that didn't fire, say what kind (leave-by, store, leaving home) and roughly when. Screenshots help.</p>
 
 <h2>Requirements</h2>
-<p>iPhone with iOS 26 or later. Calendar access for leave-by times, Always location for place reminders, microphone and speech for dictation. All optional; the app works with any subset.</p>
+<p>iPhone with iOS 26 or later, and Apple Intelligence for understanding typed or spoken sentences. Calendar access for leave-by times, Always location for place reminders, Alarms for the wake-up, microphone and speech for dictation. All optional; the app works with any subset.</p>
 
 <footer>
   <span>&copy; 2026 Daniel Kernan</span>
   <a href="privacy.html">Privacy policy</a>
   <a href="support.html">Support</a>
+  <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
   <span>Weather data by <a href="https://weatherkit.apple.com/legal-attribution.html">Apple Weather</a></span>
 </footer>
 </div>
