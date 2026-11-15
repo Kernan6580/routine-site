@@ -141,6 +141,21 @@ section.block{display:grid;gap:22px;padding-block:72px 0}
 .tier ul{margin:0;padding-left:20px;display:grid;gap:6px;font-size:16.5px;color:var(--soft)}
 
 .closing{display:grid;gap:18px;justify-items:start;padding-block:96px 0}
+
+/* The sky: the weather as Today draws it, behind a ring */
+.skywrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:center}
+.skytext{display:grid;gap:16px;align-content:start;min-width:0}
+.sky{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:7/5;background:var(--paper);border:1px solid var(--rule);isolation:isolate}
+.sky canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sky .ringmark{position:absolute;left:50%;top:56%;width:min(58%,300px);aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
+.sky .ringmark circle.t{fill:none;stroke:var(--card);stroke-opacity:.72;stroke-width:9}
+.sky .ringmark path.q{fill:none;stroke:var(--k-night);stroke-opacity:.38;stroke-width:9}
+.sky .ringmark circle.n{fill:var(--ink);stroke:var(--card);stroke-width:3}
+.skyread{position:absolute;left:22px;top:18px;font:700 15px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.skyread span{color:var(--soft);font-weight:600}
+.skypick{display:flex;flex-wrap:wrap;gap:8px}
+.skypick button{font:700 14px var(--body);color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:7px 14px;cursor:pointer}
+.skypick button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .closing h2{font-size:clamp(36px,5.5vw,64px)}
 
 footer{margin-top:80px;padding-top:22px;border-top:1px solid var(--rule);font-size:15px;color:var(--soft);display:flex;flex-wrap:wrap;gap:8px 20px}
@@ -164,6 +179,8 @@ code,.email{font-family:ui-monospace,Menlo,monospace;font-size:.92em;background:
 
 @media (max-width:900px){
   .hero{grid-template-columns:minmax(0,1fr);gap:36px;padding-block:28px 0}
+  .skywrap{grid-template-columns:minmax(0,1fr);gap:26px}
+  .sky{aspect-ratio:4/5}
   .moments,.two,.price{grid-template-columns:minmax(0,1fr)}
   .places{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
